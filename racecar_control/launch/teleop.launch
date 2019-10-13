@@ -12,8 +12,10 @@
   <arg name="run_camera" default="false"/>
 
   <!-- joystick node -->
-  <include file="$(find racecar)/launch/includes/common/joy_teleop.launch.xml" >
-    <arg name="racecar_version" value="$(arg racecar_version)" />
-  </include>
+  <group ns="vesc">
+    <include file="$(find racecar)/launch/includes/common/joy_teleop.launch.xml" >
+      <arg name="racecar_version" value="$(arg racecar_version)" />
+    </include>
+  </group>
 
 </launch>

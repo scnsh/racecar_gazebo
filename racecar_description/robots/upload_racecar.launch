@@ -1,0 +1,7 @@
+<launch>
+
+  <!-- Load URDF into ROS param server -->
+  <param name="robot_description" command="$(find xacro)/xacro
+    '$(find racecar_description)/robots/race_car.xacro'"/>
+
+</launch>
